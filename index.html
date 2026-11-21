@@ -156,7 +156,7 @@ nav a:not(.btn){display:none}
 <div class="wrap need">
 <div>
 <h2>Apply for a loan</h2>
-<p class="lead">Takes about 3 minutes. When you press the button, your email app opens with your answers ready to send to us.</p>
+<p class="lead">Takes about 3 minutes. When you press the button, WhatsApp opens with your answers ready to send to us.</p>
 <h3 style="font-size:1.15rem;margin-bottom:8px">What you need</h3>
 <ul>
 <li>A valid South African ID</li>
@@ -185,7 +185,7 @@ nav a:not(.btn){display:none}
 </div>
 <label class="check"><input type="checkbox" id="c" required><span>I allow MMAL Quick Cash Loans to check my credit record with a credit bureau and to use my details to assess my application.</span></label>
 <button class="btn" type="submit">Send my application</button>
-<p class="note">After sending, attach your ID, payslip and bank statements to the same email. We reply within 1 business day.</p>
+<p class="note">After sending, send a photo of your ID, payslip and bank statements in the same WhatsApp chat. We reply within 1 business day.</p>
 </form>
 </div>
 </section>
@@ -204,6 +204,7 @@ nav a:not(.btn){display:none}
 <footer>
 <div class="wrap">
 <strong style="color:#fff">MMAL Quick Cash Loans</strong><br>
+WhatsApp: <a href="https://wa.me/27603720673">060 372 0673</a><br>
 Email: <a href="mailto:mmalquickcashloan@gmail.com">mmalquickcashloan@gmail.com</a>
 <p class="legal">Registered credit provider. NCR registration number: <strong>NCRCP_______ (add your number here)</strong>. Loans are subject to affordability assessment and approval. Borrow responsibly: late or missed repayments may affect your credit record.</p>
 </div>
@@ -263,7 +264,7 @@ if(innerWidth<600)cam.position.z=12;
 })();
 </script>
 <script>
-var EMAIL="mmalquickcashloan@gmail.com",RATE=0.05; // RATE: monthly interest used in the estimate. Update to match your real rate and fees.
+var WA="27603720673",RATE=0.05; // RATE: monthly interest used in the estimate. Update to match your real rate and fees.
 var amt=document.getElementById("amt"),mon=document.getElementById("mon");
 function R(x){return "R"+Math.round(x).toLocaleString("en-ZA")}
 function calc(){
@@ -277,8 +278,8 @@ amt.oninput=mon.oninput=calc;calc();
 document.getElementById("f").onsubmit=function(ev){
 ev.preventDefault();
 var g=function(id){return document.getElementById(id).value};
-var body="LOAN APPLICATION\n\nName: "+g("n")+"\nCell: "+g("p")+"\nEmail: "+g("e")+"\nID number: "+g("i")+"\nAmount: R"+g("a")+"\nTerm: "+g("m")+"\nEmployment: "+g("w")+"\nMonthly income: R"+g("s")+"\nCredit check consent: Yes\n\nPlease attach: ID, latest payslip, 3 months bank statements.";
-location.href="mailto:"+EMAIL+"?subject="+encodeURIComponent("Loan application - "+g("n"))+"&body="+encodeURIComponent(body);
+var body="*NEW LOAN APPLICATION*\n\nName: "+g("n")+"\nCell: "+g("p")+"\nEmail: "+g("e")+"\nID number: "+g("i")+"\nAmount: R"+g("a")+"\nTerm: "+g("m")+"\nEmployment: "+g("w")+"\nMonthly income: R"+g("s")+"\nCredit check consent: Yes\n\nI will send my ID, payslip and bank statements now.";
+location.href="https://wa.me/"+WA+"?text="+encodeURIComponent(body);
 };
 </script>
 </body>
